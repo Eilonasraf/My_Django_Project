@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" style="background: rgb(34, 34, 34);">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/https://fonts.googleapis.com/css?family=ABeeZee' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/fonts/fontawesome5-overrides.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/best-carousel-slide.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Black-Navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Dark-Footer-1.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Dark-Footer-2.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Dark-Footer-3.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Dark-Footer-4.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Dark-Footer-5.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Dark-Footer.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Growing-Search-Bar-Animated-Text-Input.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Juvi---Push-Empty-Space-20px.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Projects-Grid-Horizontal.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Responsive-footer-1.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Responsive-footer.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Simple-Slider-1.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Simple-Slider.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Swipe-Slider-7.css' %}">
+</head>
+
+<body style="background: rgb(34, 34, 34);width: 100%;height: 789px;">
+    <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button" style="background: rgb(34, 34, 34);border-radius: 20;border-top-left-radius: 20;border-top-right-radius: 20;border-bottom-right-radius: 20;border-bottom-left-radius: 20;border-style: none;padding-top: 0;padding-bottom: 10px;height: 69px;">
+        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div><a class="navbar-brand" href="#"> </a></div>
+            <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(255,255,255);height: 60px;width: 1285px;">
+                <ul class="navbar-nav nav-right">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: rgba(224,217,217,0.9);">Movies</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: rgba(224,217,217,0.9);">Services </a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="services.html">Price Packages</a><a class="dropdown-item" href="#">Order Services</a><a class="dropdown-item" href="#">Custom Request</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" style="color: rgba(224,217,217,0.9);">About</a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                </ul>
+                <div class="d-flex justify-content-center h-100">
+                    <div class="searchbar"><input type="text" class="search_input" placeholder="Search..."><a class="search_icon" href="#"><i class="fas fa-search"></i></a></div>
+                </div>
+                <p class="ms-auto navbar-text actions"> <a class="btn btn-light action-button" role="button" href="Account/register/home">Return</a>
+            </div>
+        </div>
+    </nav>
+        <div class="container">
+            <h1><font color="#f0f8ff">Register</font></h1>
+            <br>
+            <form method="post" action="">
+                {% for i in Register_form %}
+                <label for="{{ i.id_for_label }}" class="lable"><font color="f0f8ff">{{ i.html_name }} </font></label>
+                {{ i }}
+                    <br><br>
+                {% csrf_token %}
+                        {% if i.help.text %}
+        <p class="help"><font color="#adff2f"> {{i.help_text }}</font></p>
+        {% endif %}
+
+                {% endfor %}
+            <button type="submit" class="btn btn-light action-button">Register</button>
+            </form>
+        </div>
+         <div class="footer-dark" style="background: rgb(34, 34, 34);">
+        <div style="text-align:center;">
+            <h2 class="divider-style" style="margin-top:0px;"><span style="background-color:rgb(40, 45, 50);"><a href="#"><i class="fa fa-globe"></i></a>&nbsp;More Information</span></h2>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-md-6 item text" style="margin-bottom:0px;">
+                        <h3>Motivation</h3>
+                        <p>“And if you never try you never know.”<br>Coldplay.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Monitoring</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Reporting</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col item social" style="margin-top:10px;"><input class="form-control-lg" type="email" style="width:200px;height:40px;margin-left:-3px;margin-bottom:11px;margin-top:30px;" value="Name@email.com"><button class="btn btn-primary" style="width:111px;height:40px;margin-top:-8px;" type="button">SUBSCRIBE</button>
+                    <h1 style="font-size:1rem;">Weekly Newsletter</h1>
+                </div>
+                <div class="col item social" style="margin-top:15px;"><a href="#"><i class="fa fa-google"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-github"></i></a><a href="#"><i class="icon ion-social-linkedin"></i></a></div>
+                <div style="text-align:center;margin-top:-40px;">
+                    <h2 class="divider-style"></h2>
+                </div>
+                <p class="copyright">Eilon-Asraf© 2022</p>
+            </div>
+        </footer>
+    </div>
+    <div class="article-clean"></div>
+    <div class="article-clean"></div>
+    <script src="{% static 'MainHome/HeaderFooter/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'MainHome/HeaderFooter/assets/js/bs-init.js' %}"></script>
+    <script src="{% static 'MainHome/HeaderFooter/https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'MainHome/HeaderFooter/assets/js/Simple-Slider.js' %}"></script>
+    <script src="{% static 'MainHome/HeaderFooter/https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'MainHome/HeaderFooter/assets/js/Lightbox-Gallery.js' %}"></script>
+    <script src="{% static 'MainHome/HeaderFooter/assets/js/Simple-Slider-1.js' %}"></script>
+    <script src="{% static 'MainHome/HeaderFooter/assets/js/Swipe-Slider-7.js' %}"></script>
+    <script src="{% static 'MainHome/Fortheaccount/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

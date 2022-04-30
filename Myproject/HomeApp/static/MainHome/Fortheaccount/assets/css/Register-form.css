@@ -1,0 +1,54 @@
+.rf-register-form {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.rf-input-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.rg-form {
+  margin: auto;
+}
+
+.rf-icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.rf-input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 0;
+}
+
+.rf-input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.rf-btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 0;
+}
+
+.rf-btn:hover {
+  opacity: 1;
+}
+
