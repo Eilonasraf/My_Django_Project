@@ -24,3 +24,6 @@ class Movies(models.Model):
 
     def __str__(self):
         return self.name
+
+    def snippet(self):
+        return self.discription[:10] + '...'
