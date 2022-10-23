@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
+     <title>Untitled</title>
     <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/https://fonts.googleapis.com/css?family=ABeeZee' %}">
     <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700' %}">
@@ -33,6 +33,15 @@
     <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Simple-Slider.css' %}">
     <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/Swipe-Slider-7.css' %}">
+<!--    <link rel="stylesheet" href="{% static 'MainHome/HeaderFooter/assets/css/owl.carousel.min.css' %}">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" />
+
 </head>
 
 <body style="background: rgb(34, 34, 34);width: 100%;height: 789px;">
@@ -100,47 +109,24 @@
         </div>
     </div>
     <div class="container">
-            <br>
- <div id ="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-      <div class="carousel-item active">
-          <div class="row">
-              {% for mv1 in movies1 %}
-      <div class="col">
-          <img class="img-thumbnail" src="{{ mv1.image.url }}" alt="First Slide" width="100%">
-      </div>
+        <div class="owl-carousel owl-theme">
+                {% for mv1 in movies1 %}
+                     <div class="item">
+                        <a href="{% url 'movie_details' mv1.id %}"> <img class="img-thumbnail" src="{{ mv1.image.url }}" alt="First Slide" width="100%"> </a>
+                     </div>
               {% endfor %}
+                {% for mv2 in movies2 %}
+                     <div class="item">
+                         <a href="{% url 'movie_details' mv2.id %}"> <img class="img-thumbnail" src="{{ mv2.image.url }}" alt="First Slide" width="100%"> </a>
+                     </div>
+                {% endfor %}
+            {% for mv3 in movies3 %}
+                     <div class="col">
+                         <a href="{% url 'movie_details' mv3.id %}"> <img class="img-thumbnail" src="{{ mv3.image.url }}" alt="First Slide" width="100%"> </a>
+                     </div>
+                {% endfor %}
           </div>
-      </div>
-      <div class="carousel-item">
-          <div class="row">
-              {% for mv2 in movies2 %}
-              <div class="col">
-                  <img class="img-thumbnail" src="{{ mv2.image.url }}" alt="First Slide" width="100%">
-              </div>
-                    {% endfor %}
-          </div>
-      </div>
-      <div class="carousel-item">
-          <div class="row">
-              {% for mv3 in movies3 %}
-              <div class="col">
-                  <img class="img-thumbnail" src="{{ mv3.image.url }}" alt="First Slide" width="100%">
-              </div>
-                    {% endfor %}
-          </div>
-      </div>
-  </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
- </div>
-        <br>
+    </div>
     <div class="footer-dark" style="background: rgb(34, 34, 34);">
         <div style="text-align:center;">
             <h2 class="divider-style" style="margin-top:0px;"><span style="background-color:rgb(40, 45, 50);"><a href="#"><i class="fa fa-globe"></i></a>&nbsp;More Information</span></h2>
@@ -189,7 +175,29 @@
     <script src="{% static 'MainHome/HeaderFooter/https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js' %}"></script>
     <script src="{% static 'MainHome/HeaderFooter/assets/js/Lightbox-Gallery.js' %}"></script>
     <script src="{% static 'MainHome/HeaderFooter/assets/js/Simple-Slider-1.js' %}"></script>
-    <script src="{% static 'MainHome/HeaderFooter/assets/js/Swipe-Slider-7.js' %}"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+    });
 
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+</script>
+</body>
 </html>
