@@ -7,9 +7,10 @@ Prerequisites
 Installation
 Features
 Usage
-Contributing
-License
-Getting Started
+
+
+Getting Started:
+
 Prerequisites
 Before you can run this project, you'll need to ensure you have the following prerequisites installed:
 
@@ -23,7 +24,9 @@ Bootstrap Studio: Bootstrap Studio is used for designing and styling the front-e
 
 Installation
 Clone this repository to your local machine:
+
 <img width="425" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/06295982-35d8-49e9-9a78-0dd02fa93583">
+
 
 Navigate to the project directory:
 
