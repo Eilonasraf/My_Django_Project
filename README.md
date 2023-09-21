@@ -23,52 +23,38 @@ Bootstrap Studio: Bootstrap Studio is used for designing and styling the front-e
 
 Installation
 Clone this repository to your local machine:
+<img width="425" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/06295982-35d8-49e9-9a78-0dd02fa93583">
 
-bash
-Copy code
-git clone https://github.com/your-username/My_Django_Project.git
 Navigate to the project directory:
 
-bash
-Copy code
-cd My_Django_Project
-Create a virtual environment (optional but recommended):
+<img width="134" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/b4617edf-106a-473b-91e9-0922c566503f">
 
-bash
-Copy code
-python -m venv venv
 Activate the virtual environment:
 
 On Windows:
 
-bash
-Copy code
-venv\Scripts\activate
+<img width="140" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/2cf28ee3-c4a2-47c1-ae06-f72985ba38e6">
+
 On macOS and Linux:
 
-bash
-Copy code
-source venv/bin/activate
+<img width="162" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/c426a87c-f574-4949-bf67-de2a8d656e6e">
+
 Install project dependencies:
 
-bash
-Copy code
-pip install -r requirements.txt
+<img width="208" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/2b86ddf8-dc9d-4b80-9e84-98f97a9fb6d0">
+
 Run database migrations:
 
-bash
-Copy code
-python manage.py migrate
+<img width="160" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/8c5407c3-b298-4a15-bc16-97e298c8da39">
+
 Create a superuser for the admin panel:
 
-bash
-Copy code
-python manage.py createsuperuser
+<img width="215" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/d1ff7743-d4f2-454b-b73b-dbacee890ba4">
+
 Start the development server:
 
-bash
-Copy code
-python manage.py runserver
+<img width="176" alt="image" src="https://github.com/Eilonasraf/My_Django_Project/assets/103586426/cd8acffa-066c-47b9-a54e-e799dfd5ce8b">
+
 Open your web browser and go to http://localhost:8000/admin/ to access the admin panel and log in using the superuser credentials.
 
 To access the Movies App, go to http://localhost:8000/ in your web browser.
@@ -85,22 +71,4 @@ Admin Panel: To access the admin panel, visit http://localhost:8000/admin/ and l
 
 Movies App: Visit http://localhost:8000/ to explore and interact with the Movies App. You can browse movies, search for specific titles, leave reviews, and more.
 
-Contributing
-Contributions to this project are welcome! If you have any improvements, bug fixes, or new features to suggest, please follow these steps:
-
-Fork the repository on GitHub.
-
-Clone the forked repository to your local machine.
-
-Create a new branch for your feature or bug fix:
-
-bash
-Copy code
-git checkout -b feature-name
-Make your changes and commit them with descriptive commit messages.
-
-Push your changes to your forked repository.
-
-Create a pull request to the original repository with a clear description of your changes.
-
-Your pull request will be reviewed, and once approved, it will be merged.
+Enjoy, Eilon Asraf
